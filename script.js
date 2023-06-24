@@ -128,8 +128,6 @@ function copyTable() {
     }
     document.execCommand("copy");
   }
-  copy = document.getElementById("copy-symbol");
-  copy.style.color = "green";
   selected.removeAllRanges();
 }
 
