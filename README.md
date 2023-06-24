@@ -9,9 +9,9 @@ The best part about the tool is that it exports an HTML Table that can be pasted
 
 ## How to use the tool?
 
-**STEP 1**: Open the website (duh 🗿)
-**STEP 2**: Convert the time of the event to GMT. To convert, you can utilize either an online converter or perform a simple calculation. For instance, if your time is in EDT, you can look up an online converter that can convert it to GMT for you. Alternatively, you can manually calculate the time difference to obtain the GMT equivalent.
-**STEP 3**: Enter the time in the big purple box (you cannot miss it, its massive).
-**STEP 4**: Hit submit.
-**STEP 5**: Once the table has generated, click on the pink Clipboard icon to copy the entire table onto your clipboard.
-**STEP 6**: Go to the markdown editor on WordPress where you are writing your blog and paste (_Ctrl+V_) it.
+**STEP 1**: Open the website (duh 🗿)  
+**STEP 2**: Convert the time of the event to GMT. To convert, you can utilize either an online converter or perform a simple calculation. For instance, if your time is in EDT, you can look up an online converter that can convert it to GMT for you. Alternatively, you can manually calculate the time difference to obtain the GMT equivalent.  
+**STEP 3**: Enter the time in the big purple box (you cannot miss it, its massive).  
+**STEP 4**: Hit submit.  
+**STEP 5**: Once the table has generated, click on the pink Clipboard icon to copy the entire table onto your clipboard.  
+**STEP 6**: Go to the markdown editor on WordPress where you are writing your blog and paste (_Ctrl+V_) it.  
