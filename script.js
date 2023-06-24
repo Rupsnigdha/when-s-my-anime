@@ -14,7 +14,7 @@ function submit() {
   // Getting the GMT Time from the user
   const submittedTime = document.getElementById("airingTimeGMT").value;
   const dateTimeGMT = new Date(submittedTime);
-
+  document.getElementById("copy-symbol").style.color = "#fb2576";
   // Array of objects of different timezones
   const pacificDaylightTime = new AiringDate(-7, "airingTimePDT");
   const centralDaylightTime = new AiringDate(-5, "airingTimeCDT");
@@ -36,76 +36,79 @@ function submit() {
     japanStandardTime,
     australianCentralStandardTime,
   ];
+  if (dateTimeGMT.toString() === "Invalid Date") {
+    alert("Please enter a valid date");
+  } else {
+    // Looping through the timezones to create the table
+    allTimezones.forEach(function (timezone) {
+      let localTime = updateTime(dateTimeGMT, timezone.offset);
+      let localTimeData = localTime.toString().split(" ");
+      switch (localTimeData[0]) {
+        case "Mon":
+          localTimeData[0] = "Monday";
+          break;
+        case "Tue":
+          localTimeData[0] = "Tuesday";
+          break;
+        case "Wed":
+          localTimeData[0] = "Wednesday";
+          break;
+        case "Thu":
+          localTimeData[0] = "Thursday";
+          break;
+        case "Fri":
+          localTimeData[0] = "Friday";
+          break;
+        case "Sat":
+          localTimeData[0] = "Saturday";
+          break;
+        case "Sun":
+          localTimeData[0] = "Sunday";
+          break;
+      }
+      switch (localTimeData[1]) {
+        case "Jan":
+          localTimeData[1] = "January";
+          break;
+        case "Feb":
+          localTimeData[1] = "February";
+          break;
+        case "Mar":
+          localTimeData[1] = "March";
+          break;
+        case "Apr":
+          localTimeData[1] = "April";
+          break;
+        case "May":
+          localTimeData[1] = "May";
+          break;
+        case "Jun":
+          localTimeData[1] = "June";
+          break;
+        case "Jul":
+          localTimeData[1] = "July";
+          break;
+        case "Aug":
+          localTimeData[1] = "August";
+          break;
+        case "Sep":
+          localTimeData[1] = "September";
+          break;
+        case "Oct":
+          localTimeData[1] = "October";
+          break;
+        case "Nov":
+          localTimeData[1] = "November";
+          break;
+        case "Dec":
+          localTimeData[1] = "December";
+          break;
+      }
 
-  // Looping through the timezones to create the table
-  allTimezones.forEach(function (timezone) {
-    let localTime = updateTime(dateTimeGMT, timezone.offset);
-    let localTimeData = localTime.toString().split(" ");
-    switch (localTimeData[0]) {
-      case "Mon":
-        localTimeData[0] = "Monday";
-        break;
-      case "Tue":
-        localTimeData[0] = "Tuesday";
-        break;
-      case "Wed":
-        localTimeData[0] = "Wednesday";
-        break;
-      case "Thu":
-        localTimeData[0] = "Thursday";
-        break;
-      case "Fri":
-        localTimeData[0] = "Friday";
-        break;
-      case "Sat":
-        localTimeData[0] = "Saturday";
-        break;
-      case "Sun":
-        localTimeData[0] = "Sunday";
-        break;
-    }
-    switch (localTimeData[1]) {
-      case "Jan":
-        localTimeData[1] = "January";
-        break;
-      case "Feb":
-        localTimeData[1] = "February";
-        break;
-      case "Mar":
-        localTimeData[1] = "March";
-        break;
-      case "Apr":
-        localTimeData[1] = "April";
-        break;
-      case "May":
-        localTimeData[1] = "May";
-        break;
-      case "Jun":
-        localTimeData[1] = "June";
-        break;
-      case "Jul":
-        localTimeData[1] = "July";
-        break;
-      case "Aug":
-        localTimeData[1] = "August";
-        break;
-      case "Sep":
-        localTimeData[1] = "September";
-        break;
-      case "Oct":
-        localTimeData[1] = "October";
-        break;
-      case "Nov":
-        localTimeData[1] = "November";
-        break;
-      case "Dec":
-        localTimeData[1] = "December";
-        break;
-    }
-
-    let localTimeString = `${localTimeData[0]}, ${localTimeData[1]} ${localTimeData[2]} ${localTimeData[3]} at ${localTimeData[4]}`;
-    document.getElementById(timezone.cell).innerText = localTimeString;
-  });
+      let localTimeString = `${localTimeData[0]}, ${localTimeData[1]} ${localTimeData[2]} ${localTimeData[3]} at ${localTimeData[4]}`;
+      document.getElementById(timezone.cell).innerText = localTimeString;
+    });
+  }
 }
 
 function copyTable() {
@@ -126,6 +129,7 @@ function copyTable() {
     }
     document.execCommand("copy");
   }
+  document.getElementById("copy-symbol").style.color = "green";
   selected.removeAllRanges();
 }
 
