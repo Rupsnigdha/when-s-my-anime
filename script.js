@@ -31,11 +31,25 @@ function submit() {
 }
 
 function copyTable() {
-  let urlField = document.getElementById("results");
-  let range = document.createRange();
-  range.selectNode(urlField);
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
+  let range, selected;
+
+  if (document.createRange && window.getSelection) {
+    range = document.createRange();
+    selected = window.getSelection();
+    selected.removeAllRanges();
+
+    let copiedTable = document.getElementById("results");
+    try {
+      range.selectNodeContents(copiedTable);
+      selected.addRange(range);
+    } catch (e) {
+      range.selectNode(copiedTable);
+      selected.addRange(range);
+    }
+    document.execCommand("copy");
+  }
+
+  selected.removeAllRanges();
 }
 
 button = document.getElementById("submit");

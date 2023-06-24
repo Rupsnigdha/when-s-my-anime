@@ -4,11 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WMNSA</title>
+    <title>When'sMyAnime</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/828369f713.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <nav>
+        <div class="nav-logo">
+            <img src="favicon.png" alt="">
+            <span>When'sMyAnime</span>
+        </div>
+        <div class="nav-socials">
+            <a href="https://github.com/Rupsnigdha/when-s-my-anime" target="_blank">
+                <i class="fa-brands fa-github fa-2xl"></i>
+            </a>
+            <a href="https://github.com/Rupsnigdha/when-s-my-anime" target="_blank">
+                <i class="fa-solid fa-envelope fa-2xl"></i>
+            </a>
+            <a href="https://github.com/Rupsnigdha/when-s-my-anime" target="_blank">
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+            </a>
+        </div>
+    </nav>
     <main>
         <div class="header">
             <h1>When'sMyAnime</h1>
@@ -23,6 +42,12 @@
             <button id="submit">submit</button>
         </div>
         <div class="output">
+            <div class="output-header">
+                <span>Here is your table!</span>
+                <span id="copy">
+                    <i class="fa-regular fa-clipboard fa-xl"></i>
+                </span>
+            </div>
             <table id="results" border="0">
                 <tr>
                     <th>Timezone</th>
@@ -37,7 +62,7 @@
                     <td id="airingTimeCST"></td>
                 </tr>
             </table>
-            <button id="copy">Copy</button>
+
         </div>
     </main>
 

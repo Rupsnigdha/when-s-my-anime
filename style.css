@@ -14,22 +14,80 @@
   font-size: 12px;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(251, 37, 118);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 37, 118, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d0237;
+}
+
+body {
+  background-color: black;
+}
+
 button {
   cursor: pointer;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 15%;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-logo > img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+}
+.nav-logo > span {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.nav-socials > a {
+  margin-left: auto;
+  width: 32px;
+  text-decoration: none;
+}
+
+i {
+  color: #fb2576;
+  padding-left: 2rem;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
+i:hover {
+  color: #8d0237;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
 main {
   height: 100vh;
-  width: 100vw;
-  background-color: black;
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
   padding-left: 15%;
   padding-right: 15%;
 }
 .header {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .header h1 {
   font-family: "Ysabeau SC", sans-serif;
@@ -76,14 +134,39 @@ main {
   cursor: pointer;
 }
 
-.input-fields button {
+.input-fields > button {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
   background-color: #3f0071;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
 }
-#copy {
-  color: black;
+
+.input-fields > button:hover {
+  background-color: #2c004f;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-duration: 1s;
+}
+
+.output-header {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.output-header span {
+  font-size: 2rem;
+  margin: auto 0;
+  margin-right: 1.5rem;
+}
+.output-header #copy {
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  text-align: start;
+}
+.output-header > #copy > i {
+  padding: 0;
 }
