@@ -103,8 +103,6 @@ function submit() {
         break;
     }
 
-    console.log(localTimeData);
-
     let localTimeString = `${localTimeData[0]}, ${localTimeData[1]} ${localTimeData[2]} ${localTimeData[3]} at ${localTimeData[4]}`;
     document.getElementById(timezone.cell).innerText = localTimeString;
   });
