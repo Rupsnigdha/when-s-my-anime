@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMNSA</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h1>When'sMyAnime</h1>
+            <h2>The best date-time convertor on the internet</h2>
+            <p>That converts your given date to (); hah gotcha</p>
+        </div>
+        <div class="input-fields">
+            <div class="input-fields-gmt">
+                <span>Please provide the GMT schedule</span> <input type="datetime-local" id="airingTimeGMT"
+                    name="airingTimeGMT">
+            </div>
+            <button id="submit">submit</button>
+        </div>
+        <div class="output">
+            <table id="results" border="0">
+                <tr>
+                    <th>Timezone</th>
+                    <th>time</th>
+                </tr>
+                <tr>
+                    <td>JST</td>
+                    <td id="airingTimeJST"></td>
+                </tr>
+                <tr>
+                    <td>CST</td>
+                    <td id="airingTimeCST"></td>
+                </tr>
+            </table>
+            <button id="copy">Copy</button>
+        </div>
+    </main>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
