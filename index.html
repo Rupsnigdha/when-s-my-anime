@@ -31,8 +31,9 @@
     <main>
         <div class="header">
             <h1>When'sMyAnime</h1>
-            <h2>The best date-time convertor on the internet</h2>
-            <p>That converts your given date to (); hah gotcha</p>
+            <h2>The best date-time converter on the internet</h2>
+            <p>specifically at converting GMT date-time data to PDT, CDT, EDT, BST, CEST, IST, PST, JST and ACST because
+                I'm pretty sure no other converter does that 🗿</p>
         </div>
         <div class="input-fields">
             <div class="input-fields-gmt">
@@ -45,26 +46,57 @@
             <div class="output-header">
                 <span>Here is your table!</span>
                 <span id="copy">
-                    <i class="fa-regular fa-clipboard fa-xl"></i>
+                    <i class="fa-regular fa-clipboard fa-xl" id="copy-symbol"></i>
                 </span>
             </div>
             <table id="results" border="0">
                 <tr>
                     <th>Timezone</th>
-                    <th>time</th>
+                    <th>Release Schedule</th>
                 </tr>
                 <tr>
-                    <td>JST</td>
+                    <td>Pacific Daylight Time</td>
+                    <td id="airingTimePDT"></td>
+                </tr>
+                <tr>
+                    <td>Central Daylight Time</td>
+                    <td id="airingTimeCDT"></td>
+                </tr>
+                <tr>
+                    <td>Eastern Daylight Time</td>
+                    <td id="airingTimeEDT"></td>
+                </tr>
+                <tr>
+                    <td>British Summer Time</td>
+                    <td id="airingTimeBST"></td>
+                </tr>
+                <tr>
+                    <td>Central European Summer Time</td>
+                    <td id="airingTimeCEST"></td>
+                </tr>
+                <tr>
+                    <td>Indian Standard Time</td>
+                    <td id="airingTimeIST"></td>
+                </tr>
+                <tr>
+                    <td>Philippine Time</td>
+                    <td id="airingTimePHT"></td>
+                </tr>
+                <tr>
+                    <td>Japan Standard Time</td>
                     <td id="airingTimeJST"></td>
                 </tr>
                 <tr>
-                    <td>CST</td>
-                    <td id="airingTimeCST"></td>
+                    <td>Australian Central Standard Time</td>
+                    <td id="airingTimeACST"></td>
                 </tr>
             </table>
 
         </div>
     </main>
+    <footer>
+        &copy; Rupsnigdha 2023
+    </footer>
 
 </body>
 <script src="./script.js"></script>
